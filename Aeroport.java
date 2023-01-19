@@ -1,32 +1,40 @@
+// premiere class creee
+
 public class Aeroport {
 
     // declaration des variables
 
-    String IATA;
-    String Name;
-    String country;
-    double latitude;
-    double longitude;
+    private String IATA;
+    private String Name;
+    private String country;
+    private double latitude;
+    private double longitude;
 
-    public Aeroport(String name, String country){
-
+    // creation du constructeur Aeroport
+    public Aeroport(String IATA, String Name, String country, String latitude, String longitude){
+        this.IATA = IATA;
+        this.Name = Name;
+        this.country = country;
+        this.latitude = Double.parseDouble(latitude);
+        this.longitude = Double.parseDouble(longitude);
     };
 
-    public getIATA(String IATA){
-
+    public String getIATA(){
+        return IATA;
     };
 
-    public getLatitude(double latitude){
-
+    public double getLatitude(){
+        return latitude;
     };
 
-    public getLongitude()(double longitude){
-
+    public double getLongitude(){
+        return longitude;
     };
 
-    // override
-    
-    public toString(){
+    // override = méthode toString héritée de la classe parente Aeroport
 
+    public String toString(){
+        return "Aeroport = " + "Name : " + Name + " latitude : " + latitude + " longitude : " + longitude + " IATA : "+IATA;
     };
+
 }
